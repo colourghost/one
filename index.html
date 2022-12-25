@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>%%</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
+}
+::selection {
+  background: transparent;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.one-title {
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  font-family: roboto;
+  font-size: 40px;
+  line-height: 0px;
+  color: rgb(255, 0, 0);
+  cursor: default;
+}
+.chaeyoung {
+  display: block;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+.two-title {
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  font-family: roboto;
+  font-size: 40px;
+  line-height: 0px;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+.container {
+  float: left;
+  position: relative;
+  width: 33.33%;
+  padding-bottom: 18.74%;
+  overflow: hidden;
+}
+.container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1366px) {
+  .chaeyoung {
+    max-width: 800px;
+  }
+}
+@media (max-width: 900px) {
+  .one-title {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    font-size: 30px;
+  }
+  .two-title {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .one-title {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 20px;
+  }
+  .two-title {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+  <div class="one">
+    <div class="one-title">%%</div>
+    <img class="chaeyoung" src="images/chaeyoung.jpg">
+  </div>
+
+  <div class="two"></div>
+
+  <script>
+    const one = document.querySelector('.one')
+    const two = document.querySelector('.two')
+
+    document.querySelector('.chaeyoung').addEventListener('click', _ => {
+      two.innerHTML =
+       `<div class="two-title">%%</div>
+        <div class="container"><img src="images/jisoo2.jpg"></div>
+        <div class="container"><img src="images/twice.jpg" style="width:initial;margin-left:-14%;"></div>
+        <div class="container"><img src="images/jisoo3.jpg" style="width:initial;margin-left:-3%;"></div>
+        <div class="container"><img src="images/jisoo_jennie2.jpg" style="height:initial;"></div>
+        <div class="container"><img src="images/jennie.jpg"></div>
+        <div class="container"><img src="images/everglow.jpg"></div>
+        <div class="container"><img src="images/tzuyu.jpg"></div>
+        <div class="container"><img src="images/tzuyu2.jpg"></div>
+        <div class="container"><img src="images/seungyeon.jpg" style="width:initial;margin-left:-16%;"></div>
+        <div class="container"><img src="images/rose_lisa.jpg"></div>
+        <div class="container"><img src="images/jisoo.jpg"></div>
+        <div class="container"><img src="images/rose_lisa2.jpg" style="height:initial;"></div>
+        <div class="container"><img src="images/rose2.jpg"></div>
+        <div class="container"><img src="images/rose.jpg"></div>
+        <div class="container"><img src="images/lisa_rose.jpg"></div>
+        <div class="container"><img src="images/jisoo_jennie.jpg"></div>
+        <div class="container"><img src="images/blackpink.jpg"></div>
+        <div class="container"><img src="images/rose3.jpg"></div>`
+
+      document.querySelector('.two-title').addEventListener('click', _ => {
+        two.style.display = 'none'
+        one.style.display = 'block'
+      })
+
+      one.style.display = 'none'
+      two.style.display = 'block'
+    })
+  </script>
+</body>
+</html>
