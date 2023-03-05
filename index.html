@@ -27,15 +27,15 @@ nav {
   color: rgb(255, 0, 0);
   cursor: default;
 }
+nav > span {
+  cursor: pointer;
+}
 .one > img {
   display: block;
   width: 90%;
   max-width: 1000px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  cursor: pointer;
-}
-.two > nav {
   cursor: pointer;
 }
 .two > div {
@@ -67,7 +67,7 @@ nav {
 
     one.lastElementChild.addEventListener('click', _ => {
       two.innerHTML =
-       `<nav>%%</nav>
+       `<nav><span>%%</span></nav>
         <div><img src="images/jisoo2.jpg"></div>
         <div><img src="images/twice.jpg" style="width:auto;margin-left:-14%;"></div>
         <div><img src="images/jisoo3.jpg" style="width:auto;margin-left:-3%;"></div>
@@ -87,7 +87,7 @@ nav {
         <div><img src="images/blackpink.jpg"></div>
         <div><img src="images/rose3.jpg"></div>`
 
-      two.firstElementChild.addEventListener('click', _ => {
+      two.firstElementChild.firstElementChild.addEventListener('click', _ => {
         two.style.display = 'none'
         one.style.display = 'block'
       })
