@@ -18,66 +18,45 @@
 ::-webkit-scrollbar {
   display: none;
 }
-.title {
+nav {
+  padding: 55px 0;
   text-align: center;
-  margin-top: 55px;
-  margin-bottom: 55px;
   font-family: 'courier new';
   font-size: 60px;
   line-height: 0px;
   color: rgb(255, 0, 0);
   cursor: default;
 }
-.ii {
-  cursor: pointer;
-}
-.chaeyoung {
+.one > img {
   display: block;
   width: 90%;
   max-width: 1000px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   cursor: pointer;
 }
-.container {
-  float: left;
+.two > nav {
+  cursor: pointer;
+}
+.two > div {
   position: relative;
+  float: left;
   width: 33.33%;
-  padding-bottom: 18.74%;
+  padding-bottom: 18.75%;
   overflow: hidden;
 }
-.container img {
+.two > div > img {
   position: absolute;
-  height: 100%;
   width: 100%;
-}
-@media (max-width: 1366px) {
-  .chaeyoung {
-    max-width: 800px;
-  }
-}
-@media (max-width: 900px) {
-  .title {
-    margin-top: 45px;
-    margin-bottom: 45px;
-    font-size: 30px;
-  }
-}
-@media (max-width: 600px) {
-  .title {
-    margin-top: 35px;
-    margin-bottom: 35px;
-    font-size: 20px;
-  }
+  height: 100%;
 }
 </style>
 </head>
 <body>
 
   <div class="one">
-    <div class="title">%%</div>
-    <img class="chaeyoung" src="images/chaeyoung.jpg">
+    <nav>%%</nav>
+    <img src="images/chaeyoung.jpg">
   </div>
 
   <div class="two"></div>
@@ -86,29 +65,29 @@
     const one = document.querySelector('.one')
     const two = document.querySelector('.two')
 
-    document.querySelector('.chaeyoung').addEventListener('click', _ => {
+    one.lastElementChild.addEventListener('click', _ => {
       two.innerHTML =
-       `<div class="title ii">%%</div>
-        <div class="container"><img src="images/jisoo2.jpg"></div>
-        <div class="container"><img src="images/twice.jpg" style="width:initial;margin-left:-14%;"></div>
-        <div class="container"><img src="images/jisoo3.jpg" style="width:initial;margin-left:-3%;"></div>
-        <div class="container"><img src="images/jisoo_jennie2.jpg" style="height:initial;"></div>
-        <div class="container"><img src="images/jennie.jpg"></div>
-        <div class="container"><img src="images/everglow.jpg"></div>
-        <div class="container"><img src="images/tzuyu.jpg"></div>
-        <div class="container"><img src="images/tzuyu2.jpg"></div>
-        <div class="container"><img src="images/seungyeon.jpg" style="width:initial;margin-left:-16%;"></div>
-        <div class="container"><img src="images/rose_lisa.jpg"></div>
-        <div class="container"><img src="images/jisoo.jpg"></div>
-        <div class="container"><img src="images/rose_lisa2.jpg" style="height:initial;"></div>
-        <div class="container"><img src="images/rose2.jpg"></div>
-        <div class="container"><img src="images/rose.jpg"></div>
-        <div class="container"><img src="images/lisa_rose.jpg"></div>
-        <div class="container"><img src="images/jisoo_jennie.jpg"></div>
-        <div class="container"><img src="images/blackpink.jpg"></div>
-        <div class="container"><img src="images/rose3.jpg"></div>`
+       `<nav>%%</nav>
+        <div><img src="images/jisoo2.jpg"></div>
+        <div><img src="images/twice.jpg" style="width:auto;margin-left:-14%;"></div>
+        <div><img src="images/jisoo3.jpg" style="width:auto;margin-left:-3%;"></div>
+        <div><img src="images/jisoo_jennie2.jpg" style="height:auto;"></div>
+        <div><img src="images/jennie.jpg"></div>
+        <div><img src="images/everglow.jpg"></div>
+        <div><img src="images/tzuyu.jpg"></div>
+        <div><img src="images/tzuyu2.jpg"></div>
+        <div><img src="images/seungyeon.jpg" style="width:auto;margin-left:-16%;"></div>
+        <div><img src="images/rose_lisa.jpg"></div>
+        <div><img src="images/jisoo.jpg"></div>
+        <div><img src="images/rose_lisa2.jpg" style="height:auto;"></div>
+        <div><img src="images/rose2.jpg"></div>
+        <div><img src="images/rose.jpg"></div>
+        <div><img src="images/lisa_rose.jpg"></div>
+        <div><img src="images/jisoo_jennie.jpg"></div>
+        <div><img src="images/blackpink.jpg"></div>
+        <div><img src="images/rose3.jpg"></div>`
 
-      document.querySelector('.ii').addEventListener('click', _ => {
+      two.firstElementChild.addEventListener('click', _ => {
         two.style.display = 'none'
         one.style.display = 'block'
       })
